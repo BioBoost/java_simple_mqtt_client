@@ -24,6 +24,7 @@ public class SimpleMQTTClient implements MqttCallback {
     }
 
     public SimpleMQTTClient(String broker, String clientId) {
+      this.broker = broker;
       subscriptions = new HashMap<>();
       Random random = new Random();
       this.clientId = clientId + random.nextInt();
