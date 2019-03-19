@@ -54,6 +54,6 @@ Add the dependency
   <dependency>
       <groupId>com.github.BioBoost</groupId>
       <artifactId>java_simple_mqtt_client</artifactId>
-      <version>v0.1.0</version>
+      <version>0.1.2</version>
   </dependency>
 ```
