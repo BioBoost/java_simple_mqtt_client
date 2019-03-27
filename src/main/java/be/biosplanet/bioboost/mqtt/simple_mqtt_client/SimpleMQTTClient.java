@@ -70,7 +70,7 @@ public class SimpleMQTTClient implements MqttCallback {
         client.subscribe(topic);
         subscriptions.put(topic, handler);
       } catch(MqttException me) {
-        System.out.println("Failed to connect to broker");
+        System.out.println("Failed to subscribe");
         System.out.println("reason " + me.getReasonCode());
         System.out.println("msg " + me.getMessage());
         System.out.println("loc " + me.getLocalizedMessage());
