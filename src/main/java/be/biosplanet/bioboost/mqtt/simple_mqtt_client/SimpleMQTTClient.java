@@ -80,6 +80,21 @@ public class SimpleMQTTClient implements MqttCallback {
       }
     }
 
+    public void unsubscribe(String topic) {
+      try {
+        client.unsubscribe(topic);
+        subscriptions.remove(topic);
+      } catch(MqttException me) {
+        System.out.println("Failed to unsubscribe");
+        System.out.println("reason " + me.getReasonCode());
+        System.out.println("msg " + me.getMessage());
+        System.out.println("loc " + me.getLocalizedMessage());
+        System.out.println("cause " + me.getCause());
+        System.out.println("excep " + me);
+        me.printStackTrace();
+      }
+    }
+
     public void disconnect() {
       try {
         client.disconnect();
