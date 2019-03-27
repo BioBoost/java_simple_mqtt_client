@@ -34,6 +34,12 @@ Add the dependency
 
 ## Example
 
+Import the library
+
+```java
+import be.biosplanet.bioboost.mqtt.simple_mqtt_client.SimpleMQTTClient;
+```
+
 Create a new MQTT client:
 
 ```java
